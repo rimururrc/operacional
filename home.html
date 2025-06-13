@@ -110,7 +110,86 @@
   <!-- Script para copiar prompts (mantido igual) -->
   <script>
     const prompts = {
-      // ... (seus prompts existentes)
+      "Atividades Estratégicas": "Buscar: Notícias sobre movimentos militares, exercícios conjuntos, ou acordos secretos de potências estrangeiras na região. Regras Gerais 1. Temporalidade: Apenas eventos dos últimos 7 dias (ou período definido). 2. Geolocalização: Sempre vincular ao porto/localidade especificada. 3. Hierarquia: Ordenar por relevância (risco alto primeiro). 4. Triagem: Descartar informações não verificadas ou com fontes duvidosas.",
+      "Movimentação Naval e Portuária": "Navios suspeitos, alterações não autorizadas em rotas, ou escalas prolongadas sem justificativa. Regras Gerais 1. Temporalidade: Apenas eventos dos últimos 7 dias (ou período definido). 2. Geolocalização: Sempre vincular ao porto/localidade especificada. 3. Hierarquia: Ordenar por relevância (risco alto primeiro). 4. Triagem: Descartar informações não verificadas ou com fontes duvidosas.",
+      "Ameaças Cibernéticas": "Tentativas de invasão a sistemas portuários ou relatórios de vulnerabilidades críticas. Regras Gerais 1. Temporalidade: Apenas eventos dos últimos 7 dias (ou período definido). 2. Geolocalização: Sempre vincular ao porto/localidade especificada. 3. Hierarquia: Ordenar por relevância (risco alto primeiro). 4. Triagem: Descartar informações não verificadas ou com fontes duvidosas.",
+      "Tensões Políticas/Conflitos Locais": "Protestos, greves portuárias, ou ações de grupos extremistas. Regras Gerais 1. Temporalidade: Apenas eventos dos últimos 7 dias (ou período definido). 2. Geolocalização: Sempre vincular ao porto/localidade especificada. 3. Hierarquia: Ordenar por relevância (risco alto primeiro). 4. Triagem: Descartar informações não verificadas ou com fontes duvidosas.",
+      "Inteligência Econômica": "Movimentação anormal de cargas estratégicas ou sanções recentes. Regras Gerais 1. Temporalidade: Apenas eventos dos últimos 7 dias (ou período definido). 2. Geolocalização: Sempre vincular ao porto/localidade especificada. 3. Hierarquia: Ordenar por relevância (risco alto primeiro). 4. Triagem: Descartar informações não verificadas ou com fontes duvidosas.",
+      "Meteorologia": "Alertas oficiais de tempestades, tsunamis, ou condições que afetem a logística. Regras Gerais 1. Temporalidade: Apenas eventos dos últimos 7 dias (ou período definido). 2. Geolocalização: Sempre vincular ao porto/localidade especificada. 3. Hierarquia: Ordenar por relevância (risco alto primeiro). 4. Triagem: Descartar informações não verificadas ou com fontes duvidosas.",
+      "Pirataria": "Ataques recentes, áreas de risco atualizadas, ou táticas novas. Regras Gerais 1. Temporalidade: Apenas eventos dos últimos 7 dias (ou período definido). 2. Geolocalização: Sempre vincular ao porto/localidade especificada. 3. Hierarquia: Ordenar por relevância (risco alto primeiro). 4. Triagem: Descartar informações não verificadas ou com fontes duvidosas.",
+      "Rotas Criminosas": "Relatórios de tráfico, rotas de evasão, ou apreensões recentes. Regras Gerais 1. Temporalidade: Apenas eventos dos últimos 7 dias (ou período definido). 2. Geolocalização: Sempre vincular ao porto/localidade especificada. 3. Hierarquia: Ordenar por relevância (risco alto primeiro). 4. Triagem: Descartar informações não verificadas ou com fontes duvidosas.",
+      "OSINT": "Dados de mídia social, fóruns especializados, e relatórios governamentais. Regras Gerais 1. Temporalidade: Apenas eventos dos últimos 7 dias (ou período definido). 2. Geolocalização: Sempre vincular ao porto/localidade especificada. 3. Hierarquia: Ordenar por relevância (risco alto primeiro). 4. Triagem: Descartar informações não verificadas ou com fontes duvidosas.",
+      "Impacto Político": "Reações governamentais, mudanças legislativas, ou declarações oficiais. Regras Gerais 1. Temporalidade: Apenas eventos dos últimos 7 dias (ou período definido). 2. Geolocalização: Sempre vincular ao porto/localidade especificada. 3. Hierarquia: Ordenar por relevância (risco alto primeiro). 4. Triagem: Descartar informações não verificadas ou com fontes duvidosas.",
+      "Pesquisa Operacional:": `Atue como um analista de Inteligência Operacional e colete notícias da última semana e informações confiáveis, com fontes, sobre as cidades/portos/localidades onde há indícios de atividade operacional de países diversos. O objetivo é avaliar riscos e fatores que possam impactar a Política Nacional e a Segurança da nação.
+
+Período de análise: [inserir datas]
+Porto/localidade: [inserir nome do porto ou cidade]
+
+Tópicos Prioritários para Investigação
+Atividades Estratégicas de Países Estrangeiros
+Presença militar ou logística de potências estrangeiras (ex.: China, Rússia, EUA, Irã).
+Exercícios navais, aéreos ou terrestres próximos à localidade.
+Acordos bilaterais ou investimentos suspeitos em infraestrutura crítica.
+
+Movimentação Naval e Portuária
+Navios de bandeira estrangeira com atividades incomuns (ex.: cargas não declaradas, escalas prolongadas).
+Relatos de embarcações de inteligência ou pesquisa oceanográfica próximas ao porto.
+Interrupções ou alterações não explicadas nas rotas marítimas.
+
+Ameaças à Segurança Cibernética e Infraestrutura Crítica
+Tentativas de hacking ou espionagem digital contra instalações portuárias/governamentais.
+Vulnerabilidades em sistemas de controle portuário (ex.: GPS, radar, comunicações).
+
+Tensões Políticas ou Conflitos Locais
+Protestos, greves ou instabilidade social que possam afetar operações.
+Atuação de grupos criminosos ou organizações extremistas na região.
+
+Inteligência Econômica e Comercial
+Fluxo anormal de mercadorias (ex.: armas, tecnologia sensível, recursos estratégicos).
+Sanções internacionais ou embargos afetando a região.
+
+Meteorologia e Condições Ambientais (Novo)
+Alertas de tempestades, furacões ou condições climáticas extremas que possam impactar operações.
+Nível de visibilidade, correntes marítimas ou outros fatores relevantes para navegação/segurança.
+
+Pirataria e Ameaças Marítimas (Novo)
+Relatos recentes de ataques piratas, sequestros ou abordagens suspeitas em rotas próximas.
+Áreas de alto risco (ex.: Golfo da Guiné, Estreito de Malaca).
+
+Rotas Utilizadas por Organizações Criminosas (Novo)
+Trajetos conhecidos de tráfico (drogas, armas, pessoas) ou contrabando.
+Métodos de evasão (ex.: desvio de sinais AIS, uso de embarcações fantasmas).
+
+Informações de Fontes Abertas (OSINT) e Confiáveis
+Dados de agências de notícias, relatórios governamentais e institutos de pesquisa.
+Verificação de desinformação ou fake news relacionadas à localidade.
+
+Impacto na Política Nacional
+Como as atividades detectadas podem influenciar decisões governamentais ou alianças estratégicas.
+
+Formato de Saída Esperado
+Resumo Executivo
+Período coberto e localidade analisada.
+Principais eventos identificados (em tópicos curtos).
+
+Análise Detalhada por Tópico
+Dados cronológicos, fontes verificadas (links, documentos) e nível de confiabilidade.
+Análise de Risco: Classificação (baixo/médio/alto) para cada ameaça.
+
+Situação de Oportunidades e Ameaças (Novo)
+Ameaças:
+Lista de riscos iminentes ou potenciais (ex.: clima extremo, presença militar estrangeira, rotas criminosas ativas).
+        	Impacto estimado na segurança nacional.
+
+Oportunidades:
+        	Lacunas identificadas para fortalecimento operacional (ex.: cooperação internacional, áreas sem relatos de pirataria).
+        	Fatores favoráveis à mitigação de riscos (ex.: condições climáticas estáveis, ausência de conflitos recentes).
+
+Recomendações
+
+Ações sugeridas para autoridades (ex.: aumentar patrulhas, monitorar navios específicos).
+Alertas prioritários para embarcações ou instalações.
+`
     };
 
     document.querySelectorAll('.prompt-button').forEach(button => {
@@ -123,5 +202,6 @@
       });
     });
   </script>
+
 </body>
 </html>
