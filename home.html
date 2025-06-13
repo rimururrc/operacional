@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central Operativo</title>
+  <style>
+    body {
+      background: #000 url('world_map_dark.png') no-repeat center center fixed; /* Backplate */
+      background-size: cover;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 1rem;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      background-color: rgba(31, 31, 31, 0.7); /* Fundo semi-transparente */
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .logo-bar, .button-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 20px;
+      justify-content: center;
+      background-color: rgba(31, 31, 31, 0.7); /* Fundo semi-transparente */
+      border-radius: 10px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(5px); /* Efeito de desfoque (opcional) */
+    }
+
+    .ai-button, .prompt-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(26, 26, 26, 0.9); /* Cor com transparência */
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      transition: background-color 0.3s;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .ai-button:hover, .prompt-button:hover {
+      background-color: rgba(51, 51, 51, 0.9); /* Hover com transparência */
+    }
+
+    .ai-button img {
+      height: 24px;
+      width: 24px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pesquisa Operacional</h1>
+
+  <!-- Primeira fileira: links para IAs -->
+  <div class="logo-bar">
+    <a href="https://chatgpt.com/share/684c47de-dcfc-8000-9df4-2c4b1d013a7d" target="_blank" class="ai-button">
+      <img src="https://chat.openai.com/favicon.ico" alt="ChatGPT">
+      <span>ChatGPT</span>
+    </a>
+    <a href="https://copilot.microsoft.com/shares/6pZB9reFb6i5wrwopyA5C" target="_blank" class="ai-button">
+      <img src="https://copilot.microsoft.com/favicon.ico" alt="Copilot">
+      <span>Copilot</span>
+    </a>
+    <a href="https://g.co/gemini/share/f5a05a4f11be" target="_blank" class="ai-button">
+      <img src="https://www.gstatic.com/policies/favicon.ico" alt="Gemini">
+      <span>Gemini</span>
+    </a>
+    <a href="https://grok.com/share/bGVnYWN5_b20a7a38-6404-4582-b02e-fb4e2e4adf71" target="_blank" class="ai-button">
+      <img src="https://grok.x.com/favicon.ico" alt="Grok">
+      <span>Grok</span>
+    </a>
+    <a href="https://www.perplexity.ai/search/tudo-bom-perplexity-como-estao-snLTTfQtTXK7oUvaiQ0pIw" target="_blank" class="ai-button">
+      <img src="https://www.perplexity.ai/favicon.ico" alt="Perplexity">
+      <span>Perplexity</span>
+    </a>
+  </div>
+
+  <!-- Segunda fileira: prompts -->
+  <div class="button-bar">
+    <button class="prompt-button">Atividades Estratégicas</button>
+    <button class="prompt-button">Movimentação Naval e Portuária</button>
+    <button class="prompt-button">Ameaças Cibernéticas</button>
+    <button class="prompt-button">Tensões Políticas/Conflitos Locais</button>
+    <button class="prompt-button">Inteligência Econômica</button>
+    <button class="prompt-button">Meteorologia</button>
+    <button class="prompt-button">Pirataria</button>
+    <button class="prompt-button">Rotas Criminosas</button>
+    <button class="prompt-button">OSINT</button>
+    <button class="prompt-button">Impacto Político</button>
+    <button class="prompt-button">Pesquisa Operacional</button>
+  </div>
+
+  <!-- Script para copiar prompts (mantido igual) -->
+  <script>
+    const prompts = {
+      // ... (seus prompts existentes)
+    };
+
+    document.querySelectorAll('.prompt-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const text = prompts[button.textContent];
+        if (text) {
+          navigator.clipboard.writeText(text);
+          alert(`Prompt copiado: ${button.textContent}`);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
